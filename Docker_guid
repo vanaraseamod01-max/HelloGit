@@ -1,0 +1,32 @@
+DOCKER PRACTICAL – FULL STEP-BY-STEP SOLUTION
+STEP 1: Create Project Folder
+mkdir docker-project
+cd docker-project
+STEP 2: Create HTML File
+echo "Hello, World from Docker!" > index.html
+STEP 3: Create Dockerfile
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
+STEP 4: Build Docker Image
+docker build -t mywebimage .
+STEP 5: Run Container with Port Mapping
+docker run -d -p 8080:80 --name mycontainer mywebimage
+Access in browser:
+http://localhost:8080
+STEP 6: Stop Container
+docker stop mycontainer
+STEP 7: Remove Container
+docker rm mycontainer
+STEP 8: List Images
+docker images
+STEP 9: Alternative Lightweight Dockerfile (nginx:alpine)
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/
+STEP 10: Common Docker Commands
+docker ps # running containers
+docker ps -a # all containers
+docker logs
+docker rmi
+docker rm
+docker build -t name .
+docker run -d -p 8080:80 name
