@@ -1,0 +1,30 @@
+BITBUCKET PRACTICAL – FULL STEP-BY-STEP SOLUTION
+STEP 1: Create Repository on Bitbucket
+1. Open https://bitbucket.org/
+2. Login → Repositories → Create Repository
+3. Give name: my-bitbucket-project
+4. Click Create Repository
+STEP 2: Clone Repository Locally
+git clone https://bitbucket.org/your_username/my-bitbucket-project.git
+cd my-bitbucket-project
+STEP 3: Create a File
+echo "This is Bitbucket test file" > example.txt
+STEP 4: Add File to Staging Area
+git add example.txt
+STEP 5: Commit File
+git commit -m "Added example.txt with sample content"
+STEP 6: Create New Branch
+git checkout -b feature
+STEP 7: Modify File in Feature Branch
+echo "More content added in feature branch" >> example.txt
+git add example.txt
+git commit -m "Updated example.txt in feature branch"
+STEP 8: Push Feature Branch to Bitbucket
+git push -u origin feature
+STEP 9: Create Pull Request on Bitbucket
+1. Open Bitbucket website
+2. Go to Pull Requests → Create Pull Request
+3. Source: feature, Target: main
+4. Click Merge
+STEP 10: Show Commit History
+git log --oneline
